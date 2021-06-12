@@ -40,3 +40,5 @@ while not done:
     pygame.draw.rect(screen, blue, rect, 5)
     pygame.display.flip()
 
+pygame.quit()
+
