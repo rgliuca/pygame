@@ -16,3 +16,4 @@ while not done:
 
     pygame.display.flip()
 
+pygame.quit()
