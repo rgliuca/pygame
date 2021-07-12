@@ -12,6 +12,8 @@ while not done:
         if event.type == pygame.QUIT:
             done = True
             break
+        if event.type == pygame.MOUSEBUTTONDOWN:
+            print(pygame.mouse.get_pos())
 
     '''
     key_pressed = pygame.key.get_pressed()
