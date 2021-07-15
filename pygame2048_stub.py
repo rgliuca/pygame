@@ -39,7 +39,7 @@ class Tile2048:
 	def value(self, new_value):
 		self._value = new_value
 		self._update_tile_color()
-		self._update_text_font()
+		self._update_text_size()
 	
 	@property
 	def color(self):
@@ -49,7 +49,7 @@ class Tile2048:
 		# this method will change self._tile_color depending on the value
 		pass
 
-	def _update_text_font(self):
+	def _update_text_size(self):
 		# needed to support different font size depending on 
 		# value 
 		# this method will change self._text_font
