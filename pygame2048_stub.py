@@ -86,12 +86,19 @@ class Game2048:
 
 def main():
 	import time
+	display = pygame.display.set_mode((500, 300))
 	for value in [0, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096]:
-		display = pygame.display.set_mode((500, 300))
-		tile = Tile2048(value)
-		tile.rasterize(display, (100, 100))
+		tile1 = Tile2048(value)
+		tile1.rasterize(display, (100, 50))
+		tile2 = Tile2048(value * 2)
+		tile2.rasterize(display, (220, 50))
+
+		tile3 = Tile2048(value * 2)
+		tile4 = Tile2048(value)
+		tile3.rasterize(display, (100, 150 + 20))
+		tile4.rasterize(display, (220, 150 + 20))
 		pygame.display.update()
-		time.sleep(0.8)
+		time.sleep(1.5)
 
 if __name__ == "__main__":
 	main()
