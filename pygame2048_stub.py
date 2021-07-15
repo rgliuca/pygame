@@ -46,17 +46,20 @@ class Tile2048:
 		return self._color
 
 	def _update_tile_color(self):
+		# this method will change self._tile_color depending on the value
 		pass
 
 	def _update_text_font(self):
 		# needed to support different font size depending on 
-		# value
+		# value 
+		# this method will change self._text_font
 		pass
 
 	def rasterize(self, display, position):
 		# screen is pygame display (screen)
 		# position is a tuple of (x, y) cartesian position within
 		# the screen
+		# will use self.value, self._tile_color, self._text_font to display the tile on the screen (is passed in as a pygame display) at position
 		pass
 
 class Board2048:
