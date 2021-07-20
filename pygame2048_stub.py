@@ -80,6 +80,17 @@ class Board2048:
 		tile_offset=TILE_OFFSET,
 		display_offest=DISPLAY_OFFSET):
 		# let's compute the board size using tile_size and tile_offset
+		
+		# 1. create pygame display and save the variable into self._display
+    		#       a. need to compute the screen width and height!
+    		# 2. create a 2D game board called self._board which a 2D list of
+    		#       Tile2048.
+    		#       a. Tile2048 takes how man parameters?
+    		#           1. value initialized to 0
+    		#           2. position (compute the x, y position for every tile)
+    		#           3. self._display
+    		# 3. call self._place_new_value()
+    		# 4. don't forget to call pygame.display.update() or pygame.display.flip()
 		pass
 
 
@@ -87,8 +98,13 @@ class Board2048:
 		'''
 		resets the game board: clears all cells and seed the first two random cells
 		'''
+		# iterate through all the cells in self._board and set each cell's value to 0
+    		# 	calls self._place_new_value() twice!
 
 	def _place_new_value(self):
+		# finds an empty cell and puts either a 2 or 4 in the cell!
+    		# iterate through all the cells and identify the empty ones and randomly
+    		# select an empty cell and change its value to 2 or 4
 		pass
 
 	def _shift_cells(self, cell_list):
