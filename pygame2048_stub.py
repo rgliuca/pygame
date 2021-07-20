@@ -146,11 +146,8 @@ class Game2048:
 	pass
 
 def main():
-	display = pygame.display.set_mode((500, 300))
-	for value in [0, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096]:
-		tile = Tile2048(value)
-		tile.rasterize(display, (100, 100))
-		pygame.display.update()
+	for _ in range(100):
+		board = Board2048()
 		time.sleep(0.8)
 	pygame.quit()
 
