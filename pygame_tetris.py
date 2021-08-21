@@ -136,18 +136,16 @@ if __name__ == "__main__":
 	disp = pygame.display.set_mode((canvas_width, canvas_height), 0, 32)
 	
 	disp.fill(TetrisGame.BKGROUND_COLOR)
-	block = TetrisBlock((100, 0), disp, 0)
-
-	block.rasterize()
-
-	loop_delay = 0.05
-	count = 0
 
 	t1 = TetrisTile((10, 10), disp, (255,0,0))
 
 	time.sleep(5)
 	pygame.quit()
 	quit()
+	
+	loop_delay = 0.05
+	count = 0
+	block = TetrisBlock((100, 0), disp, 0)
 
 	while True:
 		for event in pygame.event.get():
