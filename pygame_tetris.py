@@ -93,7 +93,7 @@ class TetrisBlock:
 			raise ValueError
 
 		self._block = copy.deepcopy(self.BLOCKS[block_id])
-
+		self.rasterize()
 
 	def rotate_left(self):
 		# rotates the block by 90 degrees left
