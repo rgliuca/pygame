@@ -7,17 +7,19 @@ class Tile:
 	'''
 	This class is responsible for the display of a generic game tile
 	'''
-	def __init__(self, position, display):
+	def __init__(self, 
+		position, display, 
+		tile_size=None, color=None):
 		'''
 		initializes a tile 
 		with a default color placed at position
 		'''	
 		# calling the value.setter becuase need to set the tile color
 		self._display = display
-		self._x = position[0]
-		self._y = position[1]
-		self._color = __class__.DEFAULT_COLOR
-		self._tile_size = __class__.TILE_SIZE
+		self._x, self._y = position
+		self._color = __class__.DEFAULT_COLOR if color is None else color
+		self._tile_size = __class__.TILE_SIZE if tile_size is None else tile_size
+
 		self.rasterize()
 
 	@property
