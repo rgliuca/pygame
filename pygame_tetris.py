@@ -100,6 +100,10 @@ class TetrisBlock:
 		# and calls rasterize to display on the canvas
 		pass
 
+	def move_left(self):
+		# moves the block to the left by one unit
+		pass
+
 	def animate(self):
 		# moves the block down by one unit in the y direction (animate)
 		# and calls rasterize to display the block on the canvas
