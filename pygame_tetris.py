@@ -95,13 +95,8 @@ class TetrisBlock:
 		self._block = copy.deepcopy(self.BLOCKS[block_id])
 		self.rasterize()
 
-	def rotate_left(self):
-		# rotates the block by 90 degrees left
-		# and calls rasterize to display on the canvas
-		pass
-
-	def rotate_right(self):
-		# rotates the block by 90 degrees right
+	def rotate(self):
+		# rotates the block clockwise by 90 degrees 
 		# and calls rasterize to display on the canvas
 		pass
 
