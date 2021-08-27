@@ -44,7 +44,7 @@ class Tile2048:
 		self._value = new_value
 		self._update_tile_color()
 		self._update_text_size()
-		self._rasterize()
+		self.rasterize()
 	
 	@property
 	def color(self):
@@ -162,8 +162,18 @@ class Game2048:
 	pass
 
 def main():
-	for _ in range(100):
-		board = Board2048()
+	display = pygame.display.set_mode((500, 300))
+	for value in [0, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096]:
+		tile1 = Tile2048(value, (100, 50), display)
+		#tile1.rasterize()
+		tile2 = Tile2048(value * 2, (220, 50), display)
+		#tile2.rasterize()
+
+		tile3 = Tile2048(value * 2, (100, 150+20), display)
+		tile4 = Tile2048(value, (220, 150+20), display)
+		#tile3.rasterize()
+		#tile4.rasterize()
+		pygame.display.update()
 		time.sleep(0.8)
 	pygame.quit()
 
