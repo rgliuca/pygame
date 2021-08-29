@@ -95,20 +95,20 @@ class TetrisBlock:
 		self._block = copy.deepcopy(self.BLOCKS[block_id])
 		self.rasterize()
 
-	def rotate(self):
+	def rotate(self, surrounding_image):
 		# rotates the block clockwise by 90 degrees 
 		# and calls rasterize to display on the canvas
 		pass
 
-	def move_left(self):
+	def move_left(self, board):
 		# moves the block to the left by one unit
 		pass
 	
-	def move_right(self):
+	def move_right(self, board):
 		# moves the block to the right by one unit
 		pass
 
-	def animate(self):
+	def animate(self, board):
 		# moves the block down by one unit in the y direction (animate)
 		# and calls rasterize to display the block on the canvas
 		pass
@@ -123,7 +123,24 @@ class TetrisBlock:
 		# loop through self._block (image)
 		pass
 
-
+class TetrisBoard:
+	HEIGHT = 20
+	WIDHT = 10
+	
+	def __init__(self, position, display):
+		# position is the canvas starting (x,y) to draw the board
+		self._board = []  # a two dimensional matrix with WIDTH x HEIGHT, initialize every cell to 0
+		self._display = display
+		# drawo the Tetris Game Board based on the grid size WIDTH x HEIGHT and TILE_SIZE and TILE_GAP
+		
+		
+	def spawn_new_block(self):
+		# create a new block at the top of the screen and return the block variable
+		# what position? (at the top of the screen!)
+		# what id?  (select the id based on the random algorithm)
+		new_block = TetrisBlock(position, display, id)
+	
+	
 class TetrisGame:
 	BKGROUND_COLOR = (255, 255, 255)
 
