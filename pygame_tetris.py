@@ -18,8 +18,9 @@ class TetrisBlock:
 	'''
 
 	TILE_GAP = 5
-
-	BLOCKS = [
+	
+	EMPTY_BLOCKER = [[0] * 5 for _ in range(6)]
+	
         # block 0
         (
             [[0, 1, 0, 0],
@@ -95,25 +96,37 @@ class TetrisBlock:
 		self._block = copy.deepcopy(self.BLOCKS[block_id])
 		self.rasterize()
 
-	def rotate(self, surrounding_image):
+	def rotate(self, blockers=None):
 		# rotates the block clockwise by 90 degrees 
 		# and calls rasterize to display on the canvas
+		if blockers is None:
+		    	# blockers should be an empty matrix of 5 rows x 6 columns
+			blockers = self.EMPTY_BLOCKERS
 		pass
 
-	def move_left(self, board):
+	def move_left(self, blockers=None):
 		# moves the block to the left by one unit
+		if blockers is None:
+			# blockers should be an empty matrix of 5 rows x 6 columns
+			blockers = self.EMPTY_BLOCKERS
 		pass
 	
-	def move_right(self, board):
+	def move_right(self, blockers=None):
 		# moves the block to the right by one unit
+		if blockers is None:
+			# blockers should be an empty matrix of 5 rows x 6 columns
+			blockers = self.EMPTY_BLOCKERS
 		pass
 
-	def animate(self, board):
+	def animate(self, blockers=None):
 		# moves the block down by one unit in the y direction (animate)
 		# and calls rasterize to display the block on the canvas
+		if blockers is None:
+			# blockers should be an empty matrix of 5 rows x 6 columns
+			blockers = self.EMPTY_BLOCKERS
 		pass
 
-	def rasterize(self):
+	def rasterize(self, blcokers=None):
 		# This method is going to take the display
 		# and display this Tetris block at self._x, self._y
 
@@ -121,6 +134,9 @@ class TetrisBlock:
 		# at self._x, self._y position
 
 		# loop through self._block (image)
+		if blockers is None:
+			# blockers should be an empty matrix of 5 rows x 6 columns
+			blockers = self.EMPTY_BLOCKERS
 		pass
 
 class TetrisBoard:
